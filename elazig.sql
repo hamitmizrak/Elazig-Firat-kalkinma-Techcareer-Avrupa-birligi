@@ -58,4 +58,12 @@ select min(cat.categoryID) as enKüçüðü from [nortwind].[dbo].[Categories] as cat
 
 -- min: En büyüðünü bulmak için.
 -- Nortwind databasesinden Categories tablosundaki ID>=5 yukarýnda olan categoryID'sinin en küçüðü ?
-select max(cat.categoryID) as enBüyüðü from [nortwind].[dbo].[Categories] as cat where cat.categoryID>=5;
+select 
+max(cat.categoryID) as enBüyüðü 
+from [nortwind].[dbo].[Categories] as cat 
+where cat.categoryID>=5;
+
+-- AVG: Ortalamasý
+
+
+
