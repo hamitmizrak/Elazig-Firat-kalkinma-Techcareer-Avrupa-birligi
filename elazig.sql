@@ -45,4 +45,17 @@ select * from [nortwind].[dbo].[Categories] as cat where cat.categoryID>=5;
 -- Nortwind databasesinden Categories tablosundaki ID>=5 yukarýnda olanlarý kaç tane ?
 select count(*) as toplamAdedi from [nortwind].[dbo].[Categories] as cat where cat.categoryID>=5;
 
--
+
+-- sum: toplama.
+-- Nortwind databasesinden Categories tablosundaki ID>=5 yukarýnda olan categoryID'sinin toplamý ?
+select sum(cat.categoryID) as toplamý from [nortwind].[dbo].[Categories] as cat where cat.categoryID>=5;
+
+
+-- min: En küçüðü bulmak için.
+-- Nortwind databasesinden Categories tablosundaki ID>=5 yukarýnda olan categoryID'sinin en küçüðü ?
+select min(cat.categoryID) as enKüçüðü from [nortwind].[dbo].[Categories] as cat where cat.categoryID>=5;
+
+
+-- min: En büyüðünü bulmak için.
+-- Nortwind databasesinden Categories tablosundaki ID>=5 yukarýnda olan categoryID'sinin en küçüðü ?
+select max(cat.categoryID) as enBüyüðü from [nortwind].[dbo].[Categories] as cat where cat.categoryID>=5;
