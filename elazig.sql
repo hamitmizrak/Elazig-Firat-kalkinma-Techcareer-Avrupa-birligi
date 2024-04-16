@@ -1,4 +1,4 @@
--- Single Comment
+-- Single Comment 
 /* 
 Multiple Comment
 */
@@ -9,6 +9,8 @@ use nortwind;
 -- Select 
 select * from Categories;
 
+------------------------------------------------------------
+------------------------------------------------------------
 -- Aritmetic Operators
 -- + - * / %
 -- as: alias (Takma Ad) kýsaltmak için kullanýyoruz.
@@ -56,7 +58,7 @@ select sum(cat.categoryID) as toplamý from [nortwind].[dbo].[Categories] as cat 
 select min(cat.categoryID) as enKüçüðü from [nortwind].[dbo].[Categories] as cat where cat.categoryID>=5;
 
 
--- min: En büyüðünü bulmak için.
+-- max: En büyüðünü bulmak için.
 -- Nortwind databasesinden Categories tablosundaki ID>=5 yukarýnda olan categoryID'sinin en küçüðü ?
 select 
 max(cat.categoryID) as enBüyüðü 
@@ -64,6 +66,21 @@ from [nortwind].[dbo].[Categories] as cat
 where cat.categoryID>=5;
 
 -- AVG: Ortalamasý
+-- Nortwind databasesinden Categories tablosundaki ID>=5 yukarýnda olan categoryID'sinin ortalamasý ?
+select * from Categories;
+select count(CategoryID) as count from Categories where CategoryID>=5;
+select min(CategoryID) as min from Categories where CategoryID>=5;
+select max(CategoryID) as max from Categories where CategoryID>=5;
+select sum(CategoryID) as sum from Categories where CategoryID>=5;
+select avg(CategoryID) as avg from Categories where CategoryID>=5;
+
+------------------------------------------------------------
+------------------------------------------------------------
+-- DML : Data Manipulation Language
+-- Insert: Tabloya veri eklemek
+select * from Categories;
+insert into Categories (CategoryName,Description) values ('masa','ayaklý masa');
+
 
 
 
