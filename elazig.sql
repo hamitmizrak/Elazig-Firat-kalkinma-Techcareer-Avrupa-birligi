@@ -79,8 +79,10 @@ select avg(CategoryID) as avg from Categories where CategoryID>=5;
 -- DML : Data Manipulation Language
 -- Insert: Tabloya veri eklemek
 select * from Categories;
+-- insert into tabloAdi () values ()
 insert into Categories (CategoryName,Description) values ('masa','ayaklý masa');
-
+insert INTo [nortwind].[dbo].[Categories] (CategoryName,Description) values ('masa','ayaklý masa');
+insert INTo [nortwind].[dbo].[Categories] (CategoryName,Description,Picture) values ('masa','ayaklý masa','0x1C2F00');
 
 
 
