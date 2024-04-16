@@ -90,7 +90,7 @@ insert into Categories (CategoryName,Description) values ('masa','ayaklý masa');
 insert INTo [nortwind].[dbo].[Categories] (CategoryName,Description) values ('masa','ayaklý masa');
 insert INTo [nortwind].[dbo].[Categories] (CategoryName,Description,Picture) values ('masa','ayaklý masa','0x1C2F00');
 
--- 
+-- Categories tablosuna CategoryName 
 insert into Categories (CategoryName) values ('Baskil');
 
 -- Update
