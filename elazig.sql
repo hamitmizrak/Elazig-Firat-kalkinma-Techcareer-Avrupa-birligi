@@ -134,4 +134,7 @@ select * from Categories order by CategoryID asc;
 select * from Categories order by CategoryID desc;
 select * from Categories order by CategoryName asc;
 
--- Nortwind darabasesinden Categories tablosundaki ID en büyük olan 3 veriyi gösterin.
+-- Nortwind darabasesinden Categories tablosundaki CategoryID en büyük olan 3 veriyi gösterin.
+select * from Categories;
+select top(3)* from Categories;
+select top(3)* from Categories order by CategoryID desc;
