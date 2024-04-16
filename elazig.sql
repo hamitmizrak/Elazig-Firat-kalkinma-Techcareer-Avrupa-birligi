@@ -147,4 +147,16 @@ select * from Categories;
 select distinct CategoryName from Categories;
 
 -- Nortwind databasesinden Categories tablosundaki CategoryName tekrarsýz veya tekrarsýz olan kaç tane veri vardýr ?  Keyword: count
+select * from Categories;
+select count(*) from Categories;
+select count(CategoryID) from Categories;
+select count(CategoryID) as kacTane from Categories;
+select count(CategoryID) as 'kac tane' from Categories;
+
 -- Nortwind databasesinden Categories tablosundaki CategoryName tekrarsýz olan kaç tane veri vardýr ?  Keyword: count, distinct
+select * from Categories;
+-- doðru syntax
+select count(distinct(CategoryName))  as 'kac tane' from Categories;
+
+-- yanlýþ syntax
+select distinct(count(CategoryName))  as 'kac tane' from Categories;
