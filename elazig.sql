@@ -134,7 +134,17 @@ select * from Categories order by CategoryID asc;
 select * from Categories order by CategoryID desc;
 select * from Categories order by CategoryName asc;
 
--- Nortwind darabasesinden Categories tablosundaki CategoryID en büyük olan 3 veriyi gösterin.
+-- Nortwind databasesinden Categories tablosundaki CategoryID en büyük olan 3 veriyi gösterin.
 select * from Categories;
 select top(3)* from Categories;
 select top(3)* from Categories order by CategoryID desc;
+
+---------------------------------------------------------
+-- distinct
+-- distinct: Tekrarsýz veriler
+-- Nortwind databasesinden Categories tablosundaki CategoryName tekrarsýz olacak þekilde sýralayýn ? 
+select * from Categories;
+select distinct CategoryName from Categories;
+
+-- Nortwind databasesinden Categories tablosundaki CategoryName tekrarsýz veya tekrarsýz olan kaç tane veri vardýr ?  Keyword: count
+-- Nortwind databasesinden Categories tablosundaki CategoryName tekrarsýz olan kaç tane veri vardýr ?  Keyword: count, distinct
