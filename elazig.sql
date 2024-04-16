@@ -158,5 +158,12 @@ select * from Categories;
 -- doðru syntax
 select count(distinct(CategoryName))  as 'kac tane' from Categories;
 
+-- yanlýþ syntax: Çünkü count için bir tane veri dönderir ancak order by birden fazla veri için kullandým
+/*
+Msg 8127, Level 16, State 1, Line 161
+Column "Categories.CategoryID" is invalid in the ORDER BY clause because it is not contained in either an aggregate function or the GROUP BY clause.
+*/
+select count(distinct(CategoryName))  as 'kac tane' from Categories order by CategoryID;
+
 -- yanlýþ syntax
 select distinct(count(CategoryName))  as 'kac tane' from Categories;
