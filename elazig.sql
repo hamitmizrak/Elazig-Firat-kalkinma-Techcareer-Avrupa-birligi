@@ -109,9 +109,21 @@ insert into Categories (CategoryName) values ('pc');
 select max(CategoryID) from Categories
 
 -- update and subQuery
-UPDATE Categories SET CategoryName='HamitM' where CategoryID=(select max(CategoryID) from Categories);
+UPDATE Categories SET CategoryName='HamitM', Description='Malatya' where CategoryID=(select max(CategoryID) from Categories);
 
 ---------------------------------------------------------
 -- Delete
+-- DELETE FROM tabloAdi where CategoryID=10;
+select * from Categories;
+delete from Categories where CategoryID=11;
+delete from Categories where CategoryID=(select max(CategoryID) from Categories);
+
+---------------------------------------------------------
+-- Top
+-- top: Benim istediðim kadar veriyi bana getir.
+select * from Categories;
+select top(2) * from Categories;
 
 
+---------------------------------------------------------
+-- Order By
