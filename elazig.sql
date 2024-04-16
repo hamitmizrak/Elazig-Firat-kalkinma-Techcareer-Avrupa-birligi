@@ -83,6 +83,7 @@ select avg(CategoryID) as avg from Categories where CategoryID>=5;
 -- U: Update
 -- D: Delete
 
+---------------------------------------------------------
 -- Insert: Tabloya veri eklemek
 select * from Categories;
 -- insert into tabloAdi () values ()
@@ -93,7 +94,13 @@ insert INTo [nortwind].[dbo].[Categories] (CategoryName,Description,Picture) val
 -- Categories tablosuna CategoryName 
 insert into Categories (CategoryName) values ('Baskil');
 
+---------------------------------------------------------
 -- Update
+select * from Categories;
+-- update tabloAdi set kolonAdi='yazmak' where CategoryID=10
+UPDATE Categories SET CategoryName='Laptop' where CategoryID=10;
+UPDATE [nortwind].[dbo].[Categories] SET CategoryName='Laptop' where CategoryID=10;
+
 -- Delete
 
 
