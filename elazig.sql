@@ -167,3 +167,13 @@ select count(distinct(CategoryName))  as 'kac tane' from Categories order by Cat
 
 -- yanlýþ syntax
 select distinct(count(CategoryName))  as 'kac tane' from Categories;
+
+---------------------------------------------------------
+-- Where
+-- Where: Conditional 
+-- B-I-L
+-- Between
+-- In
+-- Like
+
+
