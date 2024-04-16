@@ -101,6 +101,7 @@ select * from Categories;
 UPDATE Categories SET CategoryName='Laptop' where CategoryID=10;
 UPDATE [nortwind].[dbo].[Categories] SET CategoryName='Laptop' where CategoryID=10;
 
+-- nortwind databaseste CategoryName, categoryID en büyük olan veri için categoryName kendi isminizi yazýnýz ?
 -- Delete
 
 
