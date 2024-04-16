@@ -110,6 +110,7 @@ select max(CategoryID) from Categories
 
 -- update and subQuery
 UPDATE Categories SET CategoryName='HamitM' where CategoryID=(select max(CategoryID) from Categories);
+
 ---------------------------------------------------------
 -- Delete
 
