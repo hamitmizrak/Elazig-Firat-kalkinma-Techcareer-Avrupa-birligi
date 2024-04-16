@@ -127,3 +127,11 @@ select top(2) * from Categories;
 
 ---------------------------------------------------------
 -- Order By
+-- order by: küçükten veya büyükten küçüðe doðru sýralama yapar.
+select * from Categories;
+select * from Categories order by CategoryID;
+select * from Categories order by CategoryID asc;
+select * from Categories order by CategoryID desc;
+select * from Categories order by CategoryName asc;
+
+-- Nortwind darabasesinden Categories tablosundaki ID en büyük olan 3 veriyi gösterin.
