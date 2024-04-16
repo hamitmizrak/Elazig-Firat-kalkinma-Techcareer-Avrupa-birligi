@@ -77,6 +77,12 @@ select avg(CategoryID) as avg from Categories where CategoryID>=5;
 ------------------------------------------------------------
 ------------------------------------------------------------
 -- DML : Data Manipulation Language
+-- C R U D
+-- C: Create (Insert)
+-- R: Read (Query)
+-- U: Update
+-- D: Delete
+
 -- Insert: Tabloya veri eklemek
 select * from Categories;
 -- insert into tabloAdi () values ()
@@ -86,4 +92,9 @@ insert INTo [nortwind].[dbo].[Categories] (CategoryName,Description,Picture) val
 
 -- 
 insert into Categories (CategoryName) values ('Baskil');
+
+-- Update
+-- Delete
+
+
 
