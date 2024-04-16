@@ -97,12 +97,20 @@ insert into Categories (CategoryName) values ('Baskil');
 ---------------------------------------------------------
 -- Update
 select * from Categories;
+
 -- update tabloAdi set kolonAdi='yazmak' where CategoryID=10
 UPDATE Categories SET CategoryName='Laptop' where CategoryID=10;
 UPDATE [nortwind].[dbo].[Categories] SET CategoryName='Laptop' where CategoryID=10;
 
--- nortwind databaseste CategoryName, categoryID en büyük olan veri için categoryName kendi isminizi yazýnýz ?
--- Delete
+-- nortwind databaseste, categoryID en büyük olan veri için categoryName kendi isminizi yazýnýz ?
+UPDATE Categories SET CategoryName='HamitM' where CategoryID=10;
 
+insert into Categories (CategoryName) values ('pc');
+select max(CategoryID) from Categories
+
+-- update and subQuery
+UPDATE Categories SET CategoryName='HamitM' where CategoryID=(select max(CategoryID) from Categories);
+---------------------------------------------------------
+-- Delete
 
 
