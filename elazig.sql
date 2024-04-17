@@ -186,6 +186,7 @@ select *  from Categories where CategoryID>=4;
 select *  from Categories as cat where cat.CategoryID>=4;
 
 -- B-I-L
+----------------------
 -- Between
 -- Between: Datalardaki verilerden aralýk bulmak için kullanýyoruz.
 -- Nortwind databasesinden Categories tablosundaki CategoryID 4 ve 6 arasýndaki olan verileri listeleyelim ?
@@ -197,7 +198,7 @@ select * from [nortwind].[dbo].[Categories] as cat where cat.CategoryID between 
 -- Nortwind databasesinden Categories tablosundaki CategoryID 4 ve 6 arasýndaki olan kaç tane veri bulunmaktadýr?
 select count(*) as 'tane' from [nortwind].[dbo].[Categories] as cat where cat.CategoryID between 4 and 6 ;
 
-
+----------------------
 -- In
 -- In: içinde yani subQuery yani bir verinin çýktýsý baþka verinin girdisi için kullanýlýr.
 -- Nortwind databasesinden Categories tablosundaki CategoryID en küçük olan data için Categories tablosundaki CategoryName Computer yazýsýyla güncelliyelim ? keyword: min, update, subQuery
@@ -209,6 +210,7 @@ update Categories SET CategoryName='computer' where CategoryID=1;
 select min(cat.CategoryID) from Categories as cat;
 update Categories SET CategoryName='computer' where CategoryID=(select min(cat.CategoryID) from Categories as cat); 
 
+----------------------
 -- Like
 
 
