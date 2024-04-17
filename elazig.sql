@@ -201,8 +201,13 @@ select count(*) as 'tane' from [nortwind].[dbo].[Categories] as cat where cat.Ca
 -- In
 -- In: içinde yani subQuery yani bir verinin çýktýsý baþka verinin girdisi için kullanýlýr.
 -- Nortwind databasesinden Categories tablosundaki CategoryID en küçük olan data için Categories tablosundaki CategoryName Computer yazýsýyla güncelliyelim ? keyword: min, update, subQuery
+select * from Categories;
+select * from Categories as cat ;
+-- Manuel
+update Categories SET CategoryName='computer' where CategoryID=1; 
 
-
+select min(cat.CategoryID) from Categories as cat;
+update Categories SET CategoryName='computer' where CategoryID=(select min(cat.CategoryID) from Categories as cat); 
 
 -- Like
 
