@@ -212,5 +212,12 @@ update Categories SET CategoryName='computer' where CategoryID=(select min(cat.C
 
 ----------------------
 -- Like
+select * from Categories;
+-- Nortwind databasesinden Categories tablosundaki CategoryName'nden ilk harfi 'm' ile baþlayan datalarý listeyelim ?
+select * from Categories;
+select cat.CategoryName from Categories as cat where cat.CategoryName like 'm%';
+select * from Categories as cat where cat.CategoryName like 'm%';
 
-
+-- Nortwind databasesinden Categories tablosundaki CategoryName'nden ilk harfi 'm' ile baþlayan kaç tane data var ?
+select count(*) from Categories as cat where cat.CategoryName like 'm%';
+select count(*) as 'm ile baþlayan' from Categories as cat where cat.CategoryName like 'm%';
