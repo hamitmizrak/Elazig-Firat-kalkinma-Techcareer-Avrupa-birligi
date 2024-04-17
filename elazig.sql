@@ -246,3 +246,7 @@ select * from [nortwind].[dbo].[Categories] as cat where cat.CategoryName like '
  Nortwind databasesinden Categories tablosundaki CategoryName'nden 
  içinden 'on' geçen datayý listeleyelim ? 
 */
+select * from [nortwind].[dbo].[Categories] as cat where cat.CategoryName like '%on%';
+
+select count(*) as tane from [nortwind].[dbo].[Categories] as cat where cat.CategoryName like '%on%';
+
