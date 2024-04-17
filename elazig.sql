@@ -203,6 +203,7 @@ select count(*) as 'tane' from [nortwind].[dbo].[Categories] as cat where cat.Ca
 -- Nortwind databasesinden Categories tablosundaki CategoryID en küçük olan data için Categories tablosundaki CategoryName Computer yazýsýyla güncelliyelim ? keyword: min, update, subQuery
 
 
+
 -- Like
 
 
