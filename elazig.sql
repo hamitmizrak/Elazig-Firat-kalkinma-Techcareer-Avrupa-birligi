@@ -212,6 +212,9 @@ update Categories SET CategoryName='computer' where CategoryID=(select min(cat.C
 
 ----------------------
 -- Like
+-- Like: Benzer demektir. Filtreleme iþlemlerinden kullanýyoruz.
+-- m% = m harfi ile baþlasýn sonu neyle biterse bitsin.
+-- %m = m harfi ile bitsin baþlangýçý ne olursa olsun
 select * from Categories;
 -- Nortwind databasesinden Categories tablosundaki CategoryName'nden ilk harfi 'm' ile baþlayan datalarý listeyelim ?
 select * from Categories;
@@ -221,3 +224,9 @@ select * from Categories as cat where cat.CategoryName like 'm%';
 -- Nortwind databasesinden Categories tablosundaki CategoryName'nden ilk harfi 'm' ile baþlayan kaç tane data var ?
 select count(*) from Categories as cat where cat.CategoryName like 'm%';
 select count(*) as 'm ile baþlayan' from Categories as cat where cat.CategoryName like 'm%';
+
+-- Nortwind databasesinden Categories tablosundaki CategoryName'nden son harfi 's' ile baþlayan datalarý listeyelim ?
+select * from [nortwind].[dbo].[Categories] as cat where cat.CategoryName like '%s';
+
+-- Nortwind databasesinden Categories tablosundaki CategoryName'nden ilk harfi 'm' ile biten kaç tane data var ?
+select count(*) as 's ile biten data sayýsý' from [nortwind].[dbo].[Categories] as cat where cat.CategoryName like '%s';
