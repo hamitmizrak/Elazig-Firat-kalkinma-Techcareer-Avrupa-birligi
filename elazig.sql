@@ -200,7 +200,7 @@ select count(*) as 'tane' from [nortwind].[dbo].[Categories] as cat where cat.Ca
 
 -- In
 -- In: içinde yani subQuery yani bir verinin çýktýsý baþka verinin girdisi için kullanýlýr.
--- Nortwind databasesinden Categories tablosundaki CategoryID en büyük olan data nedir ?
+-- Nortwind databasesinden Categories tablosundaki CategoryID en küçük olan data için Categories tablosundaki CategoryName Computer yazýsýyla güncelliyelim ? keyword: min, update, subQuery
 
 
 -- Like
