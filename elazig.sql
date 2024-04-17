@@ -277,3 +277,28 @@ insert INTo [nortwind].[dbo].[Categories] (CategoryName,Description) values ('pc
 -- keyword: is null, update, BIL (ýn) subQuery
 update Categories set Picture='0x1ABC' 
 where CategoryID=(select min(CategoryID) from [nortwind].[dbo].[Categories] as cat where cat.Picture is null);
+
+
+
+
+---------------------------------------------------------
+-- Math
+-- Mutlak: abs
+select abs(-23) as 'Mutlak Deðer';
+
+-- Rastgele
+select rand()*3+1  as 'Rastgele Sayýlar';
+select ceiling(rand()*3+1 ) as 'Rastgele Sayýlar';
+
+-- Karekök: sqrt
+select sqrt(16) as 'Karekök';
+
+-- Üslü sayýlar: pow
+select power(2,6) as 'Üslü sayýlar';
+
+select floor(4.9)  as 'Aþaðý Yuvarla';
+select ceiling(4.1) as 'Yukarý Yuvarla';
+
+-- Trigonometrik
+select sin(45) as 'Sinüs';
+select cos(1) as 'Cosinüs';
