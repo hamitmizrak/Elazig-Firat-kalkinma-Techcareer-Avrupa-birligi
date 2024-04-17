@@ -34,29 +34,27 @@ select CategoryID,CategoryName from Categories;
 select cat.CategoryID,cat.CategoryName from Categories as cat;
 
 -- Bu sorguda direk database adý ile çaðýrýyorum.
-select * from [nortwind].[dbo].[Categories] ;
+select * from [nortwind].[dbo].[Categories];
 
 -- Nortwind databasesinden Categories tablosundaki ID>=5 yukarýnda olanlarý listeleyelim?
 -- select kolonAdi from tabloAdi 
 -- where: þart 
 select * from [nortwind].[dbo].[Categories] as cat where cat.categoryID>=5;
 
+------------------------------------------------------------
+------------------------------------------------------------
 -- Aggreagate
-
 -- Count: Sayma iþlemlerinden kullanýyorsunuz.
 -- Nortwind databasesinden Categories tablosundaki ID>=5 yukarýnda olanlarý kaç tane ?
 select count(*) as toplamAdedi from [nortwind].[dbo].[Categories] as cat where cat.categoryID>=5;
-
 
 -- sum: toplama.
 -- Nortwind databasesinden Categories tablosundaki ID>=5 yukarýnda olan categoryID'sinin toplamý ?
 select sum(cat.categoryID) as toplamý from [nortwind].[dbo].[Categories] as cat where cat.categoryID>=5;
 
-
 -- min: En küçüðü bulmak için.
 -- Nortwind databasesinden Categories tablosundaki ID>=5 yukarýnda olan categoryID'sinin en küçüðü ?
 select min(cat.categoryID) as enKüçüðü from [nortwind].[dbo].[Categories] as cat where cat.categoryID>=5;
-
 
 -- max: En büyüðünü bulmak için.
 -- Nortwind databasesinden Categories tablosundaki ID>=5 yukarýnda olan categoryID'sinin en küçüðü ?
@@ -68,11 +66,16 @@ where cat.categoryID>=5;
 -- AVG: Ortalamasý
 -- Nortwind databasesinden Categories tablosundaki ID>=5 yukarýnda olan categoryID'sinin ortalamasý ?
 select * from Categories;
+select avg(CategoryID) as avg from Categories where CategoryID>=5;
+
+-- Genel Aggreagate
+select * from Categories;
+select avg(CategoryID) as avg from Categories where CategoryID>=5;
 select count(CategoryID) as count from Categories where CategoryID>=5;
 select min(CategoryID) as min from Categories where CategoryID>=5;
 select max(CategoryID) as max from Categories where CategoryID>=5;
 select sum(CategoryID) as sum from Categories where CategoryID>=5;
-select avg(CategoryID) as avg from Categories where CategoryID>=5;
+
 
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -87,6 +90,7 @@ select avg(CategoryID) as avg from Categories where CategoryID>=5;
 -- Insert: Tabloya veri eklemek
 select * from Categories;
 -- insert into tabloAdi () values ()
+
 insert into Categories (CategoryName,Description) values ('masa','ayaklý masa');
 insert INTo [nortwind].[dbo].[Categories] (CategoryName,Description) values ('masa','ayaklý masa');
 insert INTo [nortwind].[dbo].[Categories] (CategoryName,Description,Picture) values ('masa','ayaklý masa','0x1C2F00');
@@ -96,6 +100,8 @@ insert into Categories (CategoryName) values ('Baskil');
 
 ---------------------------------------------------------
 -- Update
+-- update tabloAdi set kolonAdi='yazmak' where CategoryID=10;
+
 select * from Categories;
 
 -- update tabloAdi set kolonAdi='yazmak' where CategoryID=10
@@ -118,6 +124,7 @@ select * from Categories;
 delete from Categories where CategoryID=11;
 delete from Categories where CategoryID=(select max(CategoryID) from Categories);
 
+
 ---------------------------------------------------------
 -- Top
 -- top: Benim istediðim kadar veriyi bana getir.
@@ -125,8 +132,9 @@ select * from Categories;
 select top(2) * from Categories;
 
 
----------------------------------------------------------
--- Order By
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+--  Order By
 -- order by: küçükten veya büyükten küçüðe doðru sýralama yapar.
 select * from Categories;
 select * from Categories order by CategoryID;
@@ -139,7 +147,8 @@ select * from Categories;
 select top(3)* from Categories;
 select top(3)* from Categories order by CategoryID desc;
 
----------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
 -- distinct
 -- distinct: Tekrarsýz veriler
 -- Nortwind databasesinden Categories tablosundaki CategoryName tekrarsýz olacak þekilde sýralayýn ? 
@@ -170,7 +179,10 @@ select distinct(count(CategoryName))  as 'kac tane' from Categories;
 
 ---------------------------------------------------------
 -- Where
--- Where: Conditional 
+-- Where: Conditional(Þart)
+-- Nortwind databasesinden Categories tablosundaki CategoryID 4 ve 4'ün üstünde olan verileri listeleyelim ?
+
+
 -- B-I-L
 -- Between
 -- In
