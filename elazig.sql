@@ -198,7 +198,7 @@ select * from [nortwind].[dbo].[Categories] as cat where cat.CategoryID between 
 -- Nortwind databasesinden Categories tablosundaki CategoryID 4 ve 6 arasýndaki olan kaç tane veri bulunmaktadýr?
 select count(*) as 'tane' from [nortwind].[dbo].[Categories] as cat where cat.CategoryID between 4 and 6 ;
 
-----------------------
+---------------------------------------------------------
 -- In
 -- In: içinde yani subQuery yani bir verinin çýktýsý baþka verinin girdisi için kullanýlýr.
 -- Nortwind databasesinden Categories tablosundaki CategoryID en küçük olan data için Categories tablosundaki CategoryName Computer yazýsýyla güncelliyelim ? keyword: min, update, subQuery
@@ -210,7 +210,7 @@ update Categories SET CategoryName='computer' where CategoryID=1;
 select min(cat.CategoryID) from Categories as cat;
 update Categories SET CategoryName='computer' where CategoryID=(select min(cat.CategoryID) from Categories as cat); 
 
-----------------------
+---------------------------------------------------------
 -- Like
 -- Like: Benzer demektir. Filtreleme iþlemlerinden kullanýyoruz.
 -- m% = m harfi ile baþlasýn sonu neyle biterse bitsin.
@@ -250,3 +250,16 @@ select * from [nortwind].[dbo].[Categories] as cat where cat.CategoryName like '
 
 select count(*) as tane from [nortwind].[dbo].[Categories] as cat where cat.CategoryName like '%on%';
 
+---------------------------------------------------------
+
+-- is null: Hiç bir data girilmemiþse kullandýðýmýz fonksiyondur.
+--  Nortwind databasesinden Categories tablosundaki Picture sutunda 'null' olan datalarý listeleyelim ?
+select * from Categories;
+select * from Categories as cat where cat.Picture is null;
+
+-- is not null: Bütün datalar girilmiþse kullandýðýmýz fonksiyondur.
+--  Nortwind databasesinden Categories tablosundaki Picture sutunda 'null' olmayan datalarý listeleyelim ?
+select * from Categories;
+select * from Categories as cat where cat.Picture is not null;
+
+--  Nortwind databasesinden Categories tablosundaki Picture sutunda 'null' ilk datanýn picture kolondaki null yerine þunu yazalým. '0x1ABC'
