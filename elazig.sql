@@ -280,8 +280,7 @@ where CategoryID=(select min(CategoryID) from [nortwind].[dbo].[Categories] as c
 
 
 
-
----------------------------------------------------------
+--------------------------------------------------------
 -- Math
 -- Mutlak: abs
 select abs(-23) as 'Mutlak Deðer';
@@ -301,4 +300,7 @@ select ceiling(4.1) as 'Yukarý Yuvarla';
 
 -- Trigonometrik
 select sin(45) as 'Sinüs';
-select cos(1) as 'Cosinüs';
+select cos(1)  as  'Cosinüs';
+select tan(1)  as 'Tan';
+select cot(1)  as 'Cot';
+select asin(1) as 'A-Sinüs';
