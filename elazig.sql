@@ -230,3 +230,12 @@ select * from [nortwind].[dbo].[Categories] as cat where cat.CategoryName like '
 
 -- Nortwind databasesinden Categories tablosundaki CategoryName'nden ilk harfi 'm' ile biten kaç tane data var ?
 select count(*) as 's ile biten data sayýsý' from [nortwind].[dbo].[Categories] as cat where cat.CategoryName like '%s';
+
+/*
+ Nortwind databasesinden Categories tablosundaki CategoryName'nden 10 karakterli olacak 
+ 1.karakter 'C' 
+ 2.karakter 'o'
+ 3.karakter 'n'
+ 4.karakter 'f'
+ son karakteri 's' olan datayý çekiniz 
+*/
