@@ -262,4 +262,6 @@ select * from Categories as cat where cat.Picture is null;
 select * from Categories;
 select * from Categories as cat where cat.Picture is not null;
 
+----------------------------------------------------
 --  Nortwind databasesinden Categories tablosundaki Picture sutunda 'null' ilk datanýn picture kolondaki null yerine þunu yazalým. '0x1ABC'
+-- keyword: is null, update, BIL (ýn) subQuery
