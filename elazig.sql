@@ -189,9 +189,20 @@ select *  from Categories as cat where cat.CategoryID>=4;
 -- Between
 -- Between: Datalardaki verilerden aralýk bulmak için kullanýyoruz.
 -- Nortwind databasesinden Categories tablosundaki CategoryID 4 ve 6 arasýndaki olan verileri listeleyelim ?
+use nortwind;
+select * from Categories;
+-- 4<=X<=6
+select * from [nortwind].[dbo].[Categories] as cat where cat.CategoryID between 4 and 6 ;
+
+-- Nortwind databasesinden Categories tablosundaki CategoryID 4 ve 6 arasýndaki olan kaç tane veri bulunmaktadýr?
+select count(*) as 'tane' from [nortwind].[dbo].[Categories] as cat where cat.CategoryID between 4 and 6 ;
 
 
 -- In
+-- In: içinde yani subQuery yani bir verinin çýktýsý baþka verinin girdisi için kullanýlýr.
+-- Nortwind databasesinden Categories tablosundaki CategoryID en büyük olan data nedir ?
+
+
 -- Like
 
 
