@@ -232,10 +232,17 @@ select * from [nortwind].[dbo].[Categories] as cat where cat.CategoryName like '
 select count(*) as 's ile biten data sayýsý' from [nortwind].[dbo].[Categories] as cat where cat.CategoryName like '%s';
 
 /*
- Nortwind databasesinden Categories tablosundaki CategoryName'nden 10 karakterli olacak 
+ Nortwind databasesinden Categories tablosundaki CategoryName'nden 
+ 11 karakterli olacak 
  1.karakter 'C' 
  2.karakter 'o'
  3.karakter 'n'
  4.karakter 'f'
- son karakteri 's' olan datayý çekiniz 
+ son karakteri 's' olan datayý listeleyelim ? 
+*/
+select * from [nortwind].[dbo].[Categories] as cat where cat.CategoryName like 'Conf______s';
+
+/*
+ Nortwind databasesinden Categories tablosundaki CategoryName'nden 
+ içinden 'on' geçen datayý listeleyelim ? 
 */
