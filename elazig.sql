@@ -181,10 +181,16 @@ select distinct(count(CategoryName))  as 'kac tane' from Categories;
 -- Where
 -- Where: Conditional(Þart)
 -- Nortwind databasesinden Categories tablosundaki CategoryID 4 ve 4'ün üstünde olan verileri listeleyelim ?
-
+select *  from Categories;
+select *  from Categories where CategoryID>=4;
+select *  from Categories as cat where cat.CategoryID>=4;
 
 -- B-I-L
 -- Between
+-- Between: Datalardaki verilerden aralýk bulmak için kullanýyoruz.
+-- Nortwind databasesinden Categories tablosundaki CategoryID 4 ve 6 arasýndaki olan verileri listeleyelim ?
+
+
 -- In
 -- Like
 
