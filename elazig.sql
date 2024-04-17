@@ -263,5 +263,17 @@ select * from Categories;
 select * from Categories as cat where cat.Picture is not null;
 
 ----------------------------------------------------
---  Nortwind databasesinden Categories tablosundaki Picture sutunda 'null' ilk datanýn picture kolondaki null yerine þunu yazalým. '0x1ABC'
+-- Nortwind databasesinden Categories tablosundaki Picture sutunda 'null' ilk datanýn picture kolondaki null yerine þunu yazalým. '0x1ABC'
 -- keyword: is null, update, BIL (ýn) subQuery
+-- Step-1 
+select * from Categories as cat where cat.Picture is null;
+select min(cat.CategoryID) from Categories as cat where cat.Picture is null;
+
+select * from Categories;
+insert INTo [nortwind].[dbo].[Categories] (CategoryName,Description) values ('pc-1','lenovo');
+insert INTo [nortwind].[dbo].[Categories] (CategoryName,Description) values ('pc-2','msi');
+
+-- Nortwind databasesinden Categories tablosundaki Picture sutunda 'null' ilk datanýn picture kolondaki null yerine þunu yazalým. '0x1ABC'
+-- keyword: is null, update, BIL (ýn) subQuery
+update Categories set Picture='0x1ABC' 
+where CategoryID=(select min(CategoryID) from [nortwind].[dbo].[Categories] as cat where cat.Picture is null);
