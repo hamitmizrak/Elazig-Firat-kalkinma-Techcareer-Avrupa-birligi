@@ -499,9 +499,23 @@ select * from TeacherData;
 
 
 -- union
-select * from StudentData;
-select * from TeacherData;
+select * from StudentData
+select * from TeacherData
 
 select * from StudentData
-union
+union 
 select * from TeacherData
+
+
+-- union all
+select * from StudentData
+union all
+select * from TeacherData
+
+
+--------------------------------------------------------
+--------------------------------------------------------
+-- JOIN
+select * from Categories;
+select * from Products;
+select * from Products as pro INNER JOIN Categories as cat ON pro.CategoryID=cat.CategoryID
