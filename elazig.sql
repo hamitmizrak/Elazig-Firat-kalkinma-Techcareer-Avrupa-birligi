@@ -339,3 +339,27 @@ select replace(cat.CategoryName,'a','x') as 'Harf deðiþtirmesi' from Categories 
 -- keyword: update, concat
 
 -- Nortwind databasesiden Categories tablosunda CategoryName'lerin ilk 3 karakteri alýp sonuna INC ekleyelim.
+
+
+--------------------------------------------------------
+--------------------------------------------------------
+-- DDL
+-- Data Definition Language
+
+-- Create Database : Yeni bir database oluþtur.
+-- Yeni bir database oluþtur.
+create database deneme;
+
+-- Drop: Database Silmek
+-- Var olan database Silmek
+drop database deneme;
+
+-- Database hemen silmek için kullanýyoruz.
+USE master
+GO
+DROP DATABASE deneme;
+GO
+
+-- Rename: Database adýný deðiþtirmek
+EXEC sp_renamedb 'deneme', 'deneme23';
+
