@@ -309,6 +309,7 @@ select cot(1)  as 'Cot';
 select asin(1) as 'A-Sinüs';
 
 --------------------------------------------------------
+--------------------------------------------------------
 -- Cast
 -- Cast : Dönüþüm tarih, sayýlarda 
 -- Tamsayýlar: 1,2,3,4,99,1000
@@ -320,3 +321,21 @@ select 10+20 as 'sayýsal';
 select '10'+20 as 'kelimesel+sayýsal';
 select '10'+'20' as 'kelimesel+kelimesel';
 select CAST('10' as INTEGER) +  CAST('20' as INTEGER)  as 'cast(kelimesel)';
+
+--------------------------------------------------------
+--------------------------------------------------------
+-- String
+select * from Categories;
+select upper(cat.CategoryName) as 'Bütün Karakterler Büyük' from Categories as cat
+select lower(cat.CategoryName) as 'Bütün Karakterler Küçük' from Categories as cat
+select ltrim(cat.CategoryName) as 'Soldan gelen boþluklarý al' from Categories as cat
+select rtrim(cat.CategoryName) as 'Saðdan gelen boþluklarý al' from Categories as cat
+select substring(cat.CategoryName,1,3) as 'Sadece belli karakterleri gösteriyor' from Categories as cat
+select concat(cat.CategoryName,' ekle') as 'sonuna ekle' from Categories as cat
+select reverse(cat.CategoryName) as 'tersine çevir' from Categories as cat
+select replace(cat.CategoryName,'a','x') as 'Harf deðiþtirmesi' from Categories as cat
+
+-- Nortwind databasesiden Categories tablosunda CategoryName'lerin sonuna 'INC' ekleyelim.
+-- keyword: update, concat
+
+-- Nortwind databasesiden Categories tablosunda CategoryName'lerin ilk 3 karakteri alýp sonuna INC ekleyelim.
