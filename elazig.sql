@@ -319,3 +319,4 @@ select asin(1) as 'A-Sinüs';
 select 10+20 as 'sayýsal';
 select '10'+20 as 'kelimesel+sayýsal';
 select '10'+'20' as 'kelimesel+kelimesel';
+select CAST('10' as INTEGER) +  CAST('20' as INTEGER)  as 'cast(kelimesel)';
