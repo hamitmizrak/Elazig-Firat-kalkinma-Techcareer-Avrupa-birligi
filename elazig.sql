@@ -428,14 +428,22 @@ Script
 if not exists (select * from sysobjects where name='notes' and xtype='U')
 -- Pascal Case
 create table StudentData(
-studentID INT PRIMARY KEY IDENTITY NOT NULL,
+studentID INT PRIMARY KEY IDENTITY NOT NULL ,
 studentName nvarchar(100),
 studentSurname nvarchar(150),
-emailAddress nvarchar(100),
+emailAddress nvarchar(100) UNIQUE,
 vizeNotes int,
 finalNotes int,
 created_at DATETIME NOT NULL  DEFAULT CURRENT_TIMESTAMP, 
 );
 go
 
+-- Constraint: kısıtlayıcılar
+-- PRIMARY KEY
+-- FOREIGN KEY
+-- UNIQUE
+-- DEFAULT
+
+-- Nortwind databasesinden studentData tablosundaki en küçük ID'ye sahip olan data için
+-- VizeNotes*(40/100)+finalNotes*(60/100) sorgusunu yapınız ?
 
