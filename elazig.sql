@@ -448,7 +448,9 @@ go
  Nortwind databasesinden studentData tablosundaki her bir data için
  VizeNotes*(40/100)+finalNotes*(60/100) sonuçu sorgusunu yapınız ?
  */
-
+ select * from [nortwind].[dbo].[StudentData];
+ -- hayali sutun
+ select (stu.vizeNotes*0.4+stu.finalNotes*0.6) as sonuc from [nortwind].[dbo].[StudentData] as stu;
 
 /*
  Nortwind databasesinden studentData tablosundaki en küçük ID'ye sahip olan data için
