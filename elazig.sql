@@ -1,9 +1,9 @@
--- Single Comment 
+ï»¿-- Single Comment 
 /* 
 Multiple Comment
 */
 
--- Database Seç
+-- Database SeÃ§
 use nortwind;
 
 -- Select 
@@ -13,12 +13,12 @@ select * from Categories;
 ------------------------------------------------------------
 -- Aritmetic Operators
 -- + - * / %
--- as: alias (Takma Ad) kısaltmak için kullanıyoruz.
+-- as: alias (Takma Ad) kÄ±saltmak iÃ§in kullanÄ±yoruz.
 select 9+3 as toplam;
 select 9-3 as kalan;
-select 9*3 as çarpma;
-select 9/3 bölüm;
-select 9%3 as "Bölümünden kalan";
+select 9*3 as Ã§arpma;
+select 9/3 bÃ¶lÃ¼m;
+select 9%3 as "BÃ¶lÃ¼mÃ¼nden kalan";
 
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -28,43 +28,43 @@ select 9%3 as "Bölümünden kalan";
 use nortwind;
 select * from Categories;
 
--- İstediğim Sutunu çağırmak için kullanıyorum.
+-- Ä°stediÄŸim Sutunu Ã§aÄŸÄ±rmak iÃ§in kullanÄ±yorum.
 select CategoryID,CategoryName from Categories;
 
 select cat.CategoryID,cat.CategoryName from Categories as cat;
 
--- Bu sorguda direk database adı ile çağırıyorum.
+-- Bu sorguda direk database adÄ± ile Ã§aÄŸÄ±rÄ±yorum.
 select * from [nortwind].[dbo].[Categories];
 
--- Nortwind databasesinden Categories tablosundaki ID>=5 yukarında olanları listeleyelim?
+-- Nortwind databasesinden Categories tablosundaki ID>=5 yukarÄ±nda olanlarÄ± listeleyelim?
 -- select kolonAdi from tabloAdi 
--- where: şart 
+-- where: ÅŸart 
 select * from [nortwind].[dbo].[Categories] as cat where cat.categoryID>=5;
 
 ------------------------------------------------------------
 ------------------------------------------------------------
 -- Aggreagate
--- Count: Sayma işlemlerinden kullanıyorsunuz.
--- Nortwind databasesinden Categories tablosundaki ID>=5 yukarında olanları kaç tane ?
+-- Count: Sayma iÅŸlemlerinden kullanÄ±yorsunuz.
+-- Nortwind databasesinden Categories tablosundaki ID>=5 yukarÄ±nda olanlarÄ± kaÃ§ tane ?
 select count(*) as toplamAdedi from [nortwind].[dbo].[Categories] as cat where cat.categoryID>=5;
 
 -- sum: toplama.
--- Nortwind databasesinden Categories tablosundaki ID>=5 yukarında olan categoryID'sinin toplamı ?
-select sum(cat.categoryID) as toplamı from [nortwind].[dbo].[Categories] as cat where cat.categoryID>=5;
+-- Nortwind databasesinden Categories tablosundaki ID>=5 yukarÄ±nda olan categoryID'sinin toplamÄ± ?
+select sum(cat.categoryID) as toplamÄ± from [nortwind].[dbo].[Categories] as cat where cat.categoryID>=5;
 
--- min: En küçüğü bulmak için.
--- Nortwind databasesinden Categories tablosundaki ID>=5 yukarında olan categoryID'sinin en küçüğü ?
-select min(cat.categoryID) as enKüçüğü from [nortwind].[dbo].[Categories] as cat where cat.categoryID>=5;
+-- min: En kÃ¼Ã§Ã¼ÄŸÃ¼ bulmak iÃ§in.
+-- Nortwind databasesinden Categories tablosundaki ID>=5 yukarÄ±nda olan categoryID'sinin en kÃ¼Ã§Ã¼ÄŸÃ¼ ?
+select min(cat.categoryID) as enKÃ¼Ã§Ã¼ÄŸÃ¼ from [nortwind].[dbo].[Categories] as cat where cat.categoryID>=5;
 
--- max: En büyüğünü bulmak için.
--- Nortwind databasesinden Categories tablosundaki ID>=5 yukarında olan categoryID'sinin en küçüğü ?
+-- max: En bÃ¼yÃ¼ÄŸÃ¼nÃ¼ bulmak iÃ§in.
+-- Nortwind databasesinden Categories tablosundaki ID>=5 yukarÄ±nda olan categoryID'sinin en kÃ¼Ã§Ã¼ÄŸÃ¼ ?
 select 
-max(cat.categoryID) as enBüyüğü 
+max(cat.categoryID) as enBÃ¼yÃ¼ÄŸÃ¼ 
 from [nortwind].[dbo].[Categories] as cat 
 where cat.categoryID>=5;
 
--- AVG: Ortalaması
--- Nortwind databasesinden Categories tablosundaki ID>=5 yukarında olan categoryID'sinin ortalaması ?
+-- AVG: OrtalamasÄ±
+-- Nortwind databasesinden Categories tablosundaki ID>=5 yukarÄ±nda olan categoryID'sinin ortalamasÄ± ?
 select * from Categories;
 select avg(CategoryID) as avg from Categories where CategoryID>=5;
 
@@ -91,9 +91,9 @@ select sum(CategoryID) as sum from Categories where CategoryID>=5;
 select * from Categories;
 -- insert into tabloAdi () values ()
 
-insert into Categories (CategoryName,Description) values ('masa','ayaklı masa');
-insert INTo [nortwind].[dbo].[Categories] (CategoryName,Description) values ('masa','ayaklı masa');
-insert INTo [nortwind].[dbo].[Categories] (CategoryName,Description,Picture) values ('masa','ayaklı masa','0x1C2F00');
+insert into Categories (CategoryName,Description) values ('masa','ayaklÄ± masa');
+insert INTo [nortwind].[dbo].[Categories] (CategoryName,Description) values ('masa','ayaklÄ± masa');
+insert INTo [nortwind].[dbo].[Categories] (CategoryName,Description,Picture) values ('masa','ayaklÄ± masa','0x1C2F00');
 
 -- Categories tablosuna CategoryName 
 insert into Categories (CategoryName) values ('Baskil');
@@ -108,7 +108,7 @@ select * from Categories;
 UPDATE Categories SET CategoryName='Laptop' where CategoryID=10;
 UPDATE [nortwind].[dbo].[Categories] SET CategoryName='Laptop' where CategoryID=10;
 
--- nortwind databaseste, categoryID en büyük olan veri için categoryName kendi isminizi yazınız ?
+-- nortwind databaseste, categoryID en bÃ¼yÃ¼k olan veri iÃ§in categoryName kendi isminizi yazÄ±nÄ±z ?
 UPDATE Categories SET CategoryName='HamitM' where CategoryID=10;
 
 insert into Categories (CategoryName) values ('pc');
@@ -127,7 +127,7 @@ delete from Categories where CategoryID=(select max(CategoryID) from Categories)
 
 ---------------------------------------------------------
 -- Top
--- top: Benim istediğim kadar veriyi bana getir.
+-- top: Benim istediÄŸim kadar veriyi bana getir.
 select * from Categories;
 select top(2) * from Categories;
 
@@ -135,14 +135,14 @@ select top(2) * from Categories;
 -------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------
 --  Order By
--- order by: küçükten veya büyükten küçüğe doğru sıralama yapar.
+-- order by: kÃ¼Ã§Ã¼kten veya bÃ¼yÃ¼kten kÃ¼Ã§Ã¼ÄŸe doÄŸru sÄ±ralama yapar.
 select * from Categories;
 select * from Categories order by CategoryID;
 select * from Categories order by CategoryID asc;
 select * from Categories order by CategoryID desc;
 select * from Categories order by CategoryName asc;
 
--- Nortwind databasesinden Categories tablosundaki CategoryID en büyük olan 3 veriyi gösterin.
+-- Nortwind databasesinden Categories tablosundaki CategoryID en bÃ¼yÃ¼k olan 3 veriyi gÃ¶sterin.
 select * from Categories;
 select top(3)* from Categories;
 select top(3)* from Categories order by CategoryID desc;
@@ -150,37 +150,37 @@ select top(3)* from Categories order by CategoryID desc;
 -------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------
 -- distinct
--- distinct: Tekrarsız veriler
--- Nortwind databasesinden Categories tablosundaki CategoryName tekrarsız olacak şekilde sıralayın ? 
+-- distinct: TekrarsÄ±z veriler
+-- Nortwind databasesinden Categories tablosundaki CategoryName tekrarsÄ±z olacak ÅŸekilde sÄ±ralayÄ±n ? 
 select * from Categories;
 select distinct CategoryName from Categories;
 
--- Nortwind databasesinden Categories tablosundaki CategoryName tekrarsız veya tekrarsız olan kaç tane veri vardır ?  Keyword: count
+-- Nortwind databasesinden Categories tablosundaki CategoryName tekrarsÄ±z veya tekrarsÄ±z olan kaÃ§ tane veri vardÄ±r ?  Keyword: count
 select * from Categories;
 select count(*) from Categories;
 select count(CategoryID) from Categories;
 select count(CategoryID) as kacTane from Categories;
 select count(CategoryID) as 'kac tane' from Categories;
 
--- Nortwind databasesinden Categories tablosundaki CategoryName tekrarsız olan kaç tane veri vardır ?  Keyword: count, distinct
+-- Nortwind databasesinden Categories tablosundaki CategoryName tekrarsÄ±z olan kaÃ§ tane veri vardÄ±r ?  Keyword: count, distinct
 select * from Categories;
--- doğru syntax
+-- doÄŸru syntax
 select count(distinct(CategoryName))  as 'kac tane' from Categories;
 
--- yanlış syntax: Çünkü count için bir tane veri dönderir ancak order by birden fazla veri için kullandım
+-- yanlÄ±ÅŸ syntax: Ã‡Ã¼nkÃ¼ count iÃ§in bir tane veri dÃ¶nderir ancak order by birden fazla veri iÃ§in kullandÄ±m
 /*
 Msg 8127, Level 16, State 1, Line 161
 Column "Categories.CategoryID" is invalid in the ORDER BY clause because it is not contained in either an aggregate function or the GROUP BY clause.
 */
 select count(distinct(CategoryName))  as 'kac tane' from Categories order by CategoryID;
 
--- yanlış syntax
+-- yanlÄ±ÅŸ syntax
 select distinct(count(CategoryName))  as 'kac tane' from Categories;
 
 ---------------------------------------------------------
 -- Where
--- Where: Conditional(Şart)
--- Nortwind databasesinden Categories tablosundaki CategoryID 4 ve 4'ün üstünde olan verileri listeleyelim ?
+-- Where: Conditional(Åart)
+-- Nortwind databasesinden Categories tablosundaki CategoryID 4 ve 4'Ã¼n Ã¼stÃ¼nde olan verileri listeleyelim ?
 select *  from Categories;
 select *  from Categories where CategoryID>=4;
 select *  from Categories as cat where cat.CategoryID>=4;
@@ -188,20 +188,20 @@ select *  from Categories as cat where cat.CategoryID>=4;
 -- B-I-L
 ----------------------
 -- Between
--- Between: Datalardaki verilerden aralık bulmak için kullanıyoruz.
--- Nortwind databasesinden Categories tablosundaki CategoryID 4 ve 6 arasındaki olan verileri listeleyelim ?
+-- Between: Datalardaki verilerden aralÄ±k bulmak iÃ§in kullanÄ±yoruz.
+-- Nortwind databasesinden Categories tablosundaki CategoryID 4 ve 6 arasÄ±ndaki olan verileri listeleyelim ?
 use nortwind;
 select * from Categories;
 -- 4<=X<=6
 select * from [nortwind].[dbo].[Categories] as cat where cat.CategoryID between 4 and 6 ;
 
--- Nortwind databasesinden Categories tablosundaki CategoryID 4 ve 6 arasındaki olan kaç tane veri bulunmaktadır?
+-- Nortwind databasesinden Categories tablosundaki CategoryID 4 ve 6 arasÄ±ndaki olan kaÃ§ tane veri bulunmaktadÄ±r?
 select count(*) as 'tane' from [nortwind].[dbo].[Categories] as cat where cat.CategoryID between 4 and 6 ;
 
 ---------------------------------------------------------
 -- In
--- In: içinde yani subQuery yani bir verinin çıktısı başka verinin girdisi için kullanılır.
--- Nortwind databasesinden Categories tablosundaki CategoryID en küçük olan data için Categories tablosundaki CategoryName Computer yazısıyla güncelliyelim ? keyword: min, update, subQuery
+-- In: iÃ§inde yani subQuery yani bir verinin Ã§Ä±ktÄ±sÄ± baÅŸka verinin girdisi iÃ§in kullanÄ±lÄ±r.
+-- Nortwind databasesinden Categories tablosundaki CategoryID en kÃ¼Ã§Ã¼k olan data iÃ§in Categories tablosundaki CategoryName Computer yazÄ±sÄ±yla gÃ¼ncelliyelim ? keyword: min, update, subQuery
 select * from Categories;
 select * from Categories as cat ;
 -- Manuel
@@ -212,24 +212,24 @@ update Categories SET CategoryName='computer' where CategoryID=(select min(cat.C
 
 ---------------------------------------------------------
 -- Like
--- Like: Benzer demektir. Filtreleme işlemlerinden kullanıyoruz.
--- m% = m harfi ile başlasın sonu neyle biterse bitsin.
--- %m = m harfi ile bitsin başlangıçı ne olursa olsun
+-- Like: Benzer demektir. Filtreleme iÅŸlemlerinden kullanÄ±yoruz.
+-- m% = m harfi ile baÅŸlasÄ±n sonu neyle biterse bitsin.
+-- %m = m harfi ile bitsin baÅŸlangÄ±Ã§Ä± ne olursa olsun
 select * from Categories;
--- Nortwind databasesinden Categories tablosundaki CategoryName'nden ilk harfi 'm' ile başlayan dataları listeyelim ?
+-- Nortwind databasesinden Categories tablosundaki CategoryName'nden ilk harfi 'm' ile baÅŸlayan datalarÄ± listeyelim ?
 select * from Categories;
 select cat.CategoryName from Categories as cat where cat.CategoryName like 'm%';
 select * from Categories as cat where cat.CategoryName like 'm%';
 
--- Nortwind databasesinden Categories tablosundaki CategoryName'nden ilk harfi 'm' ile başlayan kaç tane data var ?
+-- Nortwind databasesinden Categories tablosundaki CategoryName'nden ilk harfi 'm' ile baÅŸlayan kaÃ§ tane data var ?
 select count(*) from Categories as cat where cat.CategoryName like 'm%';
-select count(*) as 'm ile başlayan' from Categories as cat where cat.CategoryName like 'm%';
+select count(*) as 'm ile baÅŸlayan' from Categories as cat where cat.CategoryName like 'm%';
 
--- Nortwind databasesinden Categories tablosundaki CategoryName'nden son harfi 's' ile başlayan dataları listeyelim ?
+-- Nortwind databasesinden Categories tablosundaki CategoryName'nden son harfi 's' ile baÅŸlayan datalarÄ± listeyelim ?
 select * from [nortwind].[dbo].[Categories] as cat where cat.CategoryName like '%s';
 
--- Nortwind databasesinden Categories tablosundaki CategoryName'nden ilk harfi 'm' ile biten kaç tane data var ?
-select count(*) as 's ile biten data sayısı' from [nortwind].[dbo].[Categories] as cat where cat.CategoryName like '%s';
+-- Nortwind databasesinden Categories tablosundaki CategoryName'nden ilk harfi 'm' ile biten kaÃ§ tane data var ?
+select count(*) as 's ile biten data sayÄ±sÄ±' from [nortwind].[dbo].[Categories] as cat where cat.CategoryName like '%s';
 
 /*
  Nortwind databasesinden Categories tablosundaki CategoryName'nden 
@@ -238,13 +238,13 @@ select count(*) as 's ile biten data sayısı' from [nortwind].[dbo].[Categories] 
  2.karakter 'o'
  3.karakter 'n'
  4.karakter 'f'
- son karakteri 's' olan datayı listeleyelim ? 
+ son karakteri 's' olan datayÄ± listeleyelim ? 
 */
 select * from [nortwind].[dbo].[Categories] as cat where cat.CategoryName like 'Conf______s';
 
 /*
  Nortwind databasesinden Categories tablosundaki CategoryName'nden 
- içinden 'on' geçen datayı listeleyelim ? 
+ iÃ§inden 'on' geÃ§en datayÄ± listeleyelim ? 
 */
 select * from [nortwind].[dbo].[Categories] as cat where cat.CategoryName like '%on%';
 
@@ -252,19 +252,19 @@ select count(*) as tane from [nortwind].[dbo].[Categories] as cat where cat.Cate
 
 ---------------------------------------------------------
 
--- is null: Hiç bir data girilmemişse kullandığımız fonksiyondur.
---  Nortwind databasesinden Categories tablosundaki Picture sutunda 'null' olan dataları listeleyelim ?
+-- is null: HiÃ§ bir data girilmemiÅŸse kullandÄ±ÄŸÄ±mÄ±z fonksiyondur.
+--  Nortwind databasesinden Categories tablosundaki Picture sutunda 'null' olan datalarÄ± listeleyelim ?
 select * from Categories;
 select * from Categories as cat where cat.Picture is null;
 
--- is not null: Bütün datalar girilmişse kullandığımız fonksiyondur.
---  Nortwind databasesinden Categories tablosundaki Picture sutunda 'null' olmayan dataları listeleyelim ?
+-- is not null: BÃ¼tÃ¼n datalar girilmiÅŸse kullandÄ±ÄŸÄ±mÄ±z fonksiyondur.
+--  Nortwind databasesinden Categories tablosundaki Picture sutunda 'null' olmayan datalarÄ± listeleyelim ?
 select * from Categories;
 select * from Categories as cat where cat.Picture is not null;
 
 ----------------------------------------------------
--- Nortwind databasesinden Categories tablosundaki Picture sutunda 'null' ilk datanın picture kolondaki null yerine şunu yazalım. '0x1ABC'
--- keyword: is null, update, BIL (ın) subQuery
+-- Nortwind databasesinden Categories tablosundaki Picture sutunda 'null' ilk datanÄ±n picture kolondaki null yerine ÅŸunu yazalÄ±m. '0x1ABC'
+-- keyword: is null, update, BIL (Ä±n) subQuery
 -- Step-1 
 select * from Categories as cat where cat.Picture is null;
 select min(cat.CategoryID) from Categories as cat where cat.Picture is null;
@@ -273,8 +273,8 @@ select * from Categories;
 insert INTo [nortwind].[dbo].[Categories] (CategoryName,Description) values ('pc-1','lenovo');
 insert INTo [nortwind].[dbo].[Categories] (CategoryName,Description) values ('pc-2','msi');
 
--- Nortwind databasesinden Categories tablosundaki Picture sutunda 'null' ilk datanın picture kolondaki null yerine şunu yazalım. '0x1ABC'
--- keyword: is null, update, BIL (ın) subQuery
+-- Nortwind databasesinden Categories tablosundaki Picture sutunda 'null' ilk datanÄ±n picture kolondaki null yerine ÅŸunu yazalÄ±m. '0x1ABC'
+-- keyword: is null, update, BIL (Ä±n) subQuery
 update Categories set Picture='0x1ABC' 
 where CategoryID=(select min(CategoryID) from [nortwind].[dbo].[Categories] as cat where cat.Picture is null);
 
@@ -286,39 +286,39 @@ where CategoryID=(select min(CategoryID) from [nortwind].[dbo].[Categories] as c
 select PI()
 
 -- Mutlak: abs
-select abs(-23) as 'Mutlak Değer';
+select abs(-23) as 'Mutlak DeÄŸer';
 
 -- Rastgele
-select rand()*3+1  as 'Rastgele Sayılar';
-select ceiling(rand()*3+1 ) as 'Rastgele Sayılar';
+select rand()*3+1  as 'Rastgele SayÄ±lar';
+select ceiling(rand()*3+1 ) as 'Rastgele SayÄ±lar';
 
--- Karekök: sqrt
-select sqrt(16) as 'Karekök';
+-- KarekÃ¶k: sqrt
+select sqrt(16) as 'KarekÃ¶k';
 
--- Üslü sayılar: pow
-select power(2,6) as 'Üslü sayılar';
+-- ÃœslÃ¼ sayÄ±lar: pow
+select power(2,6) as 'ÃœslÃ¼ sayÄ±lar';
 
-select floor(4.9)  as 'Aşağı Yuvarla';
-select ceiling(4.1) as 'Yukarı Yuvarla';
+select floor(4.9)  as 'AÅŸaÄŸÄ± Yuvarla';
+select ceiling(4.1) as 'YukarÄ± Yuvarla';
 
 -- Trigonometrik
-select sin(45) as 'Sinüs';
-select cos(1)  as  'Cosinüs';
+select sin(45) as 'SinÃ¼s';
+select cos(1)  as  'CosinÃ¼s';
 select tan(1)  as 'Tan';
 select cot(1)  as 'Cot';
-select asin(1) as 'A-Sinüs';
+select asin(1) as 'A-SinÃ¼s';
 
 --------------------------------------------------------
 --------------------------------------------------------
 -- Cast
--- Cast : Dönüşüm tarih, sayılarda 
--- Tamsayılar: 1,2,3,4,99,1000
--- Virgüllü Sayılar: 14.53
+-- Cast : DÃ¶nÃ¼ÅŸÃ¼m tarih, sayÄ±larda 
+-- TamsayÄ±lar: 1,2,3,4,99,1000
+-- VirgÃ¼llÃ¼ SayÄ±lar: 14.53
 -- String: 'Merhabalar'
--- Boolean: true(1), yanlış(0)
+-- Boolean: true(1), yanlÄ±ÅŸ(0)
 
-select 10+20 as 'sayısal';
-select '10'+20 as 'kelimesel+sayısal';
+select 10+20 as 'sayÄ±sal';
+select '10'+20 as 'kelimesel+sayÄ±sal';
 select '10'+'20' as 'kelimesel+kelimesel';
 select CAST('10' as INTEGER) +  CAST('20' as INTEGER)  as 'cast(kelimesel)';
 
@@ -326,19 +326,19 @@ select CAST('10' as INTEGER) +  CAST('20' as INTEGER)  as 'cast(kelimesel)';
 --------------------------------------------------------
 -- String
 select * from Categories;
-select upper(cat.CategoryName) as 'Bütün Karakterler Büyük' from Categories as cat
-select lower(cat.CategoryName) as 'Bütün Karakterler Küçük' from Categories as cat
-select ltrim(cat.CategoryName) as 'Soldan gelen boşlukları al' from Categories as cat
-select rtrim(cat.CategoryName) as 'Sağdan gelen boşlukları al' from Categories as cat
-select substring(cat.CategoryName,1,3) as 'Sadece belli karakterleri gösteriyor' from Categories as cat
+select upper(cat.CategoryName) as 'BÃ¼tÃ¼n Karakterler BÃ¼yÃ¼k' from Categories as cat
+select lower(cat.CategoryName) as 'BÃ¼tÃ¼n Karakterler KÃ¼Ã§Ã¼k' from Categories as cat
+select ltrim(cat.CategoryName) as 'Soldan gelen boÅŸluklarÄ± al' from Categories as cat
+select rtrim(cat.CategoryName) as 'SaÄŸdan gelen boÅŸluklarÄ± al' from Categories as cat
+select substring(cat.CategoryName,1,3) as 'Sadece belli karakterleri gÃ¶steriyor' from Categories as cat
 select concat(cat.CategoryName,' ekle') as 'sonuna ekle' from Categories as cat
-select reverse(cat.CategoryName) as 'tersine çevir' from Categories as cat
-select replace(cat.CategoryName,'a','x') as 'Harf değiştirmesi' from Categories as cat
+select reverse(cat.CategoryName) as 'tersine Ã§evir' from Categories as cat
+select replace(cat.CategoryName,'a','x') as 'Harf deÄŸiÅŸtirmesi' from Categories as cat
 
 -- Nortwind databasesiden Categories tablosunda CategoryName'lerin sonuna 'INC' ekleyelim.
 -- keyword: update, concat
 
--- Nortwind databasesiden Categories tablosunda CategoryName'lerin ilk 3 karakteri alıp sonuna INC ekleyelim.
+-- Nortwind databasesiden Categories tablosunda CategoryName'lerin ilk 3 karakteri alÄ±p sonuna INC ekleyelim.
 
 
 --------------------------------------------------------
@@ -346,20 +346,96 @@ select replace(cat.CategoryName,'a','x') as 'Harf değiştirmesi' from Categories 
 -- DDL
 -- Data Definition Language
 
--- Create Database : Yeni bir database oluştur.
--- Yeni bir database oluştur.
+-- Create Database : Yeni bir database oluÅŸtur.
+-- Yeni bir database oluÅŸtur.
 create database deneme;
 
 -- Drop: Database Silmek
 -- Var olan database Silmek
-drop database deneme;
+drop database deneme23;
 
--- Database hemen silmek için kullanıyoruz.
+-- Database hemen silmek iÃ§in kullanÄ±yoruz.
 USE master
 GO
-DROP DATABASE deneme;
+DROP DATABASE deneme23;
 GO
 
--- Rename: Database adını değiştirmek
+-- Rename: Database adÄ±nÄ± deÄŸiÅŸtirmek
 EXEC sp_renamedb 'deneme', 'deneme23';
+
+--------------------------------------------------------
+--------------------------------------------------------
+-- Datatypes
+/*
+SÄ±klÄ±kla KullanÄ±lan Data Types;
+TamsayÄ±larda: int
+VirgÃ¼llÃ¼ SayÄ±larda: float
+Kelimelerde: nvarchar
+Tarih: Date veya DateTime
+
+
+TINYINT: Ã‡ok kÃ¼Ã§Ã¼k tamsayÄ± deÄŸerlerini saklamak iÃ§in kullanÄ±lÄ±r. Ã–rneÄŸin, 0 ile 255 arasÄ±ndaki deÄŸerler TINYINT tÃ¼rÃ¼nde saklanabilir. Boyut olarak 1 byte alana sahiptir.
+0<=TINYINT<=255
+SMALLINT: KÃ¼Ã§Ã¼k tamsayÄ± deÄŸerlerini saklamak iÃ§in kullanÄ±lÄ±r. INT'ten daha kÃ¼Ã§Ã¼k tamsayÄ± deÄŸerlerini saklayabilir. Boyut olarak 2 byte alana sahiptir.
+INT: TamsayÄ± deÄŸerleri saklamak iÃ§in kullanÄ±lÄ±r. Ã–rneÄŸin, 1, 2, -100, 0 gibi deÄŸerler INT tÃ¼rÃ¼nde saklanabilir. Boyut olarak 4 byte alana sahiptir.
+BIGINT: BÃ¼yÃ¼k tamsayÄ± deÄŸerlerini saklamak iÃ§in kullanÄ±lÄ±r. INT'ten daha bÃ¼yÃ¼k tamsayÄ± deÄŸerlerini saklayabilir. Boyut olarak 8 byte alana sahiptir.
+TINYINT<SMALLINT<INT<BIGINT
+
+
+DECIMAL(p, s) veya NUMERIC(p, s): OndalÄ±k sayÄ±larÄ± saklamak iÃ§in kullanÄ±lÄ±r. p, toplam basamak sayÄ±sÄ±nÄ± (ondalÄ±k noktadan Ã¶nce ve sonra toplam basamak sayÄ±sÄ±) belirtirken s, ondalÄ±k basamak sayÄ±sÄ±nÄ± belirtir.
+FLOAT: Kayan nokta sayÄ±larÄ±nÄ± saklamak iÃ§in kullanÄ±lÄ±r. BÃ¼yÃ¼k veya kÃ¼Ã§Ã¼k ondalÄ±k sayÄ±lar iÃ§in uygundur.
+Ã–rnek: 44.10
+REAL: Ä°kili hassaslÄ±kta kayan nokta sayÄ±larÄ±nÄ± saklamak iÃ§in kullanÄ±lÄ±r. FLOAT'tan daha dÃ¼ÅŸÃ¼k bir hassasiyete sahiptir.
+Ã–rnek: 44.101222222
+
+
+VARCHAR(n) veya NVARCHAR(n): DeÄŸiÅŸken uzunluklu karakter dizilerini saklamak iÃ§in kullanÄ±lÄ±r. 
+n, maksimum karakter sayÄ±sÄ±nÄ± belirtir. 
+VARCHAR, ASCII karakterlerini (sadece ingilizce harfler) 
+NVARCHAR ise Unicode karakterlerini saklar. (Ã‡ince, ArapÃ§a , Japonca vs)
+Dikkat: nvarchar Dynamics bir datatypes'dir.
+Ã–rnek ïƒ¨ nvarchar(255) AnlamÄ±: En fazla 255 karakter kullanabilirsin. ancak eÄŸer siz 10 karakter kullanÄ±rsanÄ±z geriye kalan 255-10= 245 kadar bit kadar yer kaplamÄ±yor.
+
+CHAR(n) veya NCHAR(n): Sabit uzunluklu karakter dizilerini saklamak iÃ§in kullanÄ±lÄ±r. n, sabit karakter dizisinin uzunluÄŸunu belirtir.
+Daha hÄ±zlÄ± ve ilkeldir.
+Dinamik deÄŸildir.
+
+DATE: Tarih deÄŸerlerini saklamak iÃ§in kullanÄ±lÄ±r. YYYY-MM-DD biÃ§imindedir.
+
+TIME: Saat deÄŸerlerini saklamak iÃ§in kullanÄ±lÄ±r. HH:MM:SS.SSS biÃ§imindedir.
+
+DATETIME: Tarih ve saat deÄŸerlerini saklamak iÃ§in kullanÄ±lÄ±r. YYYY-MM-DD HH:MM:SS.SSS biÃ§imindedir.
+
+
+*/
+
+/*
+truncate: Tablonun iÃ§eriÄŸini temizlemek iÃ§in kullanÄ±yoruz.
+truncate table tabloAdi
+*/
+
+/*
+Table Rename:
+EXEC sp_rename 'eski_tablo_adi', 'yeni_tablo_adi';
+EXEC sp_rename 'cars', 'yeni_cars';
+*/
+
+/* 
+Script
+*/
+
+-- Biraz sonra vereceÄŸim table creati iÃ§in isimlendirme farklÄ± ise table oluÅŸtur
+if not exists (select * from sysobjects where name='notes' and xtype='U')
+-- Pascal Case
+create table StudentData(
+studentID INT PRIMARY KEY IDENTITY NOT NULL,
+studentName nvarchar(100),
+studentSurname nvarchar(150),
+emailAddress nvarchar(100),
+vizeNotes int,
+finalNotes int,
+created_at DATETIME NOT NULL  DEFAULT CURRENT_TIMESTAMP, 
+);
+go
+
 
