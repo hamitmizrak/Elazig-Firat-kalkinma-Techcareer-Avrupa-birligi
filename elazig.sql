@@ -519,3 +519,9 @@ select * from TeacherData
 select * from Categories;
 select * from Products;
 select * from Products as pro INNER JOIN Categories as cat ON pro.CategoryID=cat.CategoryID
+
+
+-- GROUP BY
+
+
+-- HAVING
