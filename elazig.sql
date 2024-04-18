@@ -450,10 +450,12 @@ go
  */
  select * from [nortwind].[dbo].[StudentData];
  -- hayali sutun
- select (stu.vizeNotes*0.4+stu.finalNotes*0.6) as sonuc from [nortwind].[dbo].[StudentData] as stu;
+ select (stu.vizeNotes*0.4+stu.finalNotes*0.6) as sonuc  from [nortwind].[dbo].[StudentData] as stu;
+ select stu.studentID, stu.studentName, stu.studentSurname, (stu.vizeNotes*0.4+stu.finalNotes*0.6) as 'geçer notu'  from [nortwind].[dbo].[StudentData] as stu;
 
 /*
  Nortwind databasesinden studentData tablosundaki en küçük ID'ye sahip olan data için
  VizeNotes*(40/100)+finalNotes*(60/100) sonuçu sorgusunu yapınız ?
  */
+ select stu.studentID, stu.studentName, stu.studentSurname, (stu.vizeNotes*0.4+stu.finalNotes*0.6) as 'geçer notu'  from [nortwind].[dbo].[StudentData] as stu where stu.studentID=(select min(stu2.studentID) from StudentData as stu2);
 
