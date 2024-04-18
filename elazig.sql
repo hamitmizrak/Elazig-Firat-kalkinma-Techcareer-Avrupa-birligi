@@ -444,6 +444,14 @@ go
 -- UNIQUE
 -- DEFAULT
 
--- Nortwind databasesinden studentData tablosundaki en küçük ID'ye sahip olan data için
--- VizeNotes*(40/100)+finalNotes*(60/100) sorgusunu yapınız ?
+/*
+ Nortwind databasesinden studentData tablosundaki her bir data için
+ VizeNotes*(40/100)+finalNotes*(60/100) sonuçu sorgusunu yapınız ?
+ */
+
+
+/*
+ Nortwind databasesinden studentData tablosundaki en küçük ID'ye sahip olan data için
+ VizeNotes*(40/100)+finalNotes*(60/100) sonuçu sorgusunu yapınız ?
+ */
 
