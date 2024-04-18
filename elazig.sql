@@ -282,6 +282,9 @@ where CategoryID=(select min(CategoryID) from [nortwind].[dbo].[Categories] as c
 
 --------------------------------------------------------
 -- Math
+-- PI
+select PI()
+
 -- Mutlak: abs
 select abs(-23) as 'Mutlak Deðer';
 
@@ -304,3 +307,15 @@ select cos(1)  as  'Cosinüs';
 select tan(1)  as 'Tan';
 select cot(1)  as 'Cot';
 select asin(1) as 'A-Sinüs';
+
+--------------------------------------------------------
+-- Cast
+-- Cast : Dönüþüm tarih, sayýlarda 
+-- Tamsayýlar: 1,2,3,4,99,1000
+-- Virgüllü Sayýlar: 14.53
+-- String: 'Merhabalar'
+-- Boolean: true(1), yanlýþ(0)
+
+select 10+20 as 'sayýsal';
+select '10'+20 as 'kelimesel+sayýsal';
+select '10'+'20' as 'kelimesel+kelimesel';
