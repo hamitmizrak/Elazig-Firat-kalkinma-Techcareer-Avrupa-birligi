@@ -437,6 +437,8 @@ finalNotes int,
 created_at DATETIME NOT NULL  DEFAULT CURRENT_TIMESTAMP, 
 );
 go
+insert into StudentData (studentName,studentSurname,emailAddress,vizeNotes,finalNotes) values ('isim-3','soyisim-3','email3@gmail.com',80,70);
+select * from StudentData;
 
 -- Constraint: kısıtlayıcılar
 -- PRIMARY KEY
@@ -459,3 +461,47 @@ go
  */
  select stu.studentID, stu.studentName, stu.studentSurname, (stu.vizeNotes*0.4+stu.finalNotes*0.6) as 'geçer notu'  from [nortwind].[dbo].[StudentData] as stu where stu.studentID=(select min(stu2.studentID) from StudentData as stu2);
 
+ --------------------------------------------------------
+--------------------------------------------------------
+-- union 
+-- union: Farklı tabloları aynı yerde göstermeye yarar.
+-- Şart: aynı kolon sayısına sahip olmalıdır.
+
+-- STUDENT
+create table StudentData(
+studentID INT PRIMARY KEY IDENTITY NOT NULL ,
+studentName nvarchar(100),
+studentSurname nvarchar(150),
+emailAddress nvarchar(100) UNIQUE,
+vizeNotes int,
+finalNotes int,
+created_at DATETIME NOT NULL  DEFAULT CURRENT_TIMESTAMP, 
+);
+go
+insert into StudentData (studentName,studentSurname,emailAddress,vizeNotes,finalNotes) values ('isim-3','soyisim-3','email3@gmail.com',80,70);
+select * from StudentData;
+
+-- TEACHER
+create table TeacherData(
+teacherID INT PRIMARY KEY IDENTITY NOT NULL ,
+teacherName nvarchar(100),
+teacherSurname nvarchar(150),
+emailAddress nvarchar(100) UNIQUE,
+vizeNotes int,
+finalNotes int,
+created_at DATETIME NOT NULL  DEFAULT CURRENT_TIMESTAMP, 
+);
+go
+insert into TeacherData (teacherName,teacherSurname,emailAddress,vizeNotes,finalNotes) values ('isim-1','soyisim-1','email1@gmail.com',80,80);
+insert into TeacherData (teacherName,teacherSurname,emailAddress,vizeNotes,finalNotes) values ('isim-2','soyisim-2','email2@gmail.com',70,80);
+insert into TeacherData (teacherName,teacherSurname,emailAddress,vizeNotes,finalNotes) values ('isim-3','soyisim-2','email3@gmail.com',90,80);
+select * from TeacherData;
+
+
+-- union
+select * from StudentData;
+select * from TeacherData;
+
+select * from StudentData
+union
+select * from TeacherData
