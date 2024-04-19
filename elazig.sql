@@ -548,6 +548,9 @@ select emp.department, min(emp.salary) as 'Maaş ortalaması' from [nortwind].[d
 /*
 HAVING ifadesi, SQL'de GROUP BY ifadesiyle kullanılarak gruplama yapıldıktan sonra belirli bir koşulu sağlayan grupları seçmek için kullanılır. HAVING ifadesi WHERE ifadesine benzerdir, ancak WHERE ifadesi verileri filtrelemek için kullanılırken, HAVING ifadesi grupları filtrelemek için kullanılır.
 */
--- Nortwind databasesinden employees tablosundaki çalışanların bölümlerine göre maaş ortalaması 32K olanları listeleyelim ?
+
+-- Nortwind databasesinden employees tablosundaki çalışanların bölümlerine göre maaş ortalaması 30K olanları listeleyelim ?
 -- Keyword: group, aggreagate, having
+select emp.department, min(emp.salary) as 'Maaş ortalaması' from [nortwind].[dbo].[Employees] as emp  GROUP BY emp.department having avg(emp.salary)>30;
+
 
