@@ -523,6 +523,31 @@ select * from Products as pro LEFT JOIN Categories as cat ON pro.CategoryID=cat.
 select * from Products as pro RIGHT JOIN Categories as cat ON pro.CategoryID=cat.CategoryID
 
 -- GROUP BY
+/*
+Bir kolonumuzdaki kaç kere tekrar yaptığını, minumum değerini bulmak ,maksimum değerini bulma (aggregate function) değerler üzerinde işlem yapabilmemizi sağlar.
+
+Group By : Where, Aggregate, columnName
+group by: Kolonun gruplama yapabilmemize olanak sağlar.
+Where ile group by sıkı sıkı birbirine bağlıdır.
+
+select kolon_adi ,aggregate_function from tablo_adi where şart group by kolon_adi;
+
+*/
+
+-- Nortwind databasesinden employees tablosundaki çalışanların bölümlerine göre maaş ortalaması
+select * from [nortwind].[dbo].[Employees] 
+select emp.department, avg(emp.salary) as 'Maaş ortalaması' from [nortwind].[dbo].[Employees] as emp  GROUP BY emp.department ;
 
 
+-- Nortwind databasesinden employees tablosundaki çalışanların bölümlerine göre en düşük maaşlar 
+select * from [nortwind].[dbo].[Employees] 
+select emp.department, min(emp.salary) as 'Maaş ortalaması' from [nortwind].[dbo].[Employees] as emp  GROUP BY emp.department ;
+
+----------------------------------------------------
 -- HAVING
+/*
+HAVING ifadesi, SQL'de GROUP BY ifadesiyle kullanılarak gruplama yapıldıktan sonra belirli bir koşulu sağlayan grupları seçmek için kullanılır. HAVING ifadesi WHERE ifadesine benzerdir, ancak WHERE ifadesi verileri filtrelemek için kullanılırken, HAVING ifadesi grupları filtrelemek için kullanılır.
+*/
+-- Nortwind databasesinden employees tablosundaki çalışanların bölümlerine göre maaş ortalaması 32K olanları listeleyelim ?
+-- Keyword: group, aggreagate, having
+
