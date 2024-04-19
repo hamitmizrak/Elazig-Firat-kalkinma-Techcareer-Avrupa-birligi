@@ -519,7 +519,8 @@ select * from TeacherData
 select * from Categories;
 select * from Products;
 select * from Products as pro INNER JOIN Categories as cat ON pro.CategoryID=cat.CategoryID
-
+select * from Products as pro LEFT JOIN Categories as cat ON pro.CategoryID=cat.CategoryID
+select * from Products as pro RIGHT JOIN Categories as cat ON pro.CategoryID=cat.CategoryID
 
 -- GROUP BY
 
